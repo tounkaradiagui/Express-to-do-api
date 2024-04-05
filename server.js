@@ -4,10 +4,10 @@ const mongoose = require('mongoose')
 const app = express()
 const todoRoutes = require('./routes/todoRoutes')
 
-// Middleware pour  parser les données envoyées dans le corps de la requête.
+// Middleware pour parser les données envoyées dans le corps de la requête.
 app.use(express.json());
 
-// Port  sur lequel le serveur est écouter
+// Port sur lequel le serveur est écouté
 const PORT = process.env.PORT || 8000
 
 //  Connexion à MongoDB
@@ -20,8 +20,8 @@ app.get('/', (req, res) => {
 
 // ******************************** CRUD - Gestion de TODO: CREATE, READ, UPDATE et DELETE ***********************************
 
-app.use('/api/', todoRoutes);
-
+// Routes 
+app.use('/api/todo/', todoRoutes);
 
 // Connexion à la base de données
 mongoose.connect(mongo_url).then(() => {

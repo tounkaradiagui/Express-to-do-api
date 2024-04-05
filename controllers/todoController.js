@@ -1,6 +1,7 @@
 const express = require('express')
 const Todo = require('../models/Todo')
 
+// Ajouter une liste de tâches
 const createTodo = async (req, res) => {
     try {
         const {title, status} = req.body;
@@ -18,6 +19,7 @@ const createTodo = async (req, res) => {
     }
 };
 
+// Récupérer toute la liste des taches
 const getAllTodo = async (req, res) => {
     try {
         const todo = await Todo.find({});
@@ -30,6 +32,7 @@ const getAllTodo = async (req, res) => {
     }
 };
 
+// Récuperer une seule tache grâce à son id
 const getTodoById = async (req, res) => {
     const id = req.params.id;
     try {
@@ -41,11 +44,47 @@ const getTodoById = async (req, res) => {
     } catch (error) {
         console.log(error);
     }
+};
+
+// Mettre à jour une tache en utilisant son id
+const updateTodo = async (req, res) => {
+    const {id} = req.params;
+
+    try {
+        const todo = await Todo.findByIdAndUpdate(id, req.body);
+        if (!todo) {
+            return res.status(404).json({error : "La tâche n'existe pas"});
+        }
+    
+        const  updatedTodo = await Todo.findById(id);
+        return res.status(200).json(updatedTodo);
+    } catch (error) {
+        console.log(error);
+    }
+};
+
+// Supprimer une tache en utilisant son id
+const deleteTodo = async (req, res) => {
+    const {id} = req.params;
+
+    try {
+        const todo = await Todo.findByIdAndDelete(id);
+        if(!todo) {
+            return res.status(404).json({ error : 'Cette tache est déja supprimé.' });
+        }
+
+        return res.status(200).json("La tache a été supprimé avec succès");
+
+    } catch (error) {
+        console.log(error);
+    }
 }
 
 
 module.exports = {
     createTodo,
     getAllTodo,
-    getTodoById
+    getTodoById,
+    updateTodo,
+    deleteTodo
 }
