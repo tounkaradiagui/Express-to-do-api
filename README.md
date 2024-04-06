@@ -1,6 +1,7 @@
 ### Documentation de l'API
 
 *** Choix technologique  ***
+# MERN Stack et React Native
 1. Fonctionalités de l'API (Backend)
     - Utilisation d'un framework NodeJS pour la gestion des requêtes HTTP et la génération du code source.
     - Utilisation de Express, un middleware de routing pour faciliter le développement de l'application.
@@ -19,8 +20,8 @@
     # Gestion de tache avec Vite et React JS
     * [x] Affichage de la liste des taches
     * [x] Ajout d'une nouvelle
-    * [] Modification d'une tache existante
-    * [] Suppression d'une tache
+    * [ ] Modification d'une tache existante
+    * [ ] Suppression d'une tache
 
 3. Base de données
         Pour stocker les informations sur les tâches, j'utilise une base de données NoSQL MongoDB. Cette dernière est gérée par Mongo.
