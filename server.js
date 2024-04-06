@@ -18,10 +18,8 @@ app.get('/', (req, res) => {
     res.send("Bienvenue sur le serveur TODO API ! Le backend est prêt pour la connexion")
 });
 
-// ******************************** CRUD - Gestion de TODO: CREATE, READ, UPDATE et DELETE ***********************************
-
-// Routes 
-app.use('/api/todo/', todoRoutes);
+// Utilisation des routes définies dans le fichier "todoRoutes"
+app.use('/api/todo', todoRoutes);
 
 // Connexion à la base de données
 mongoose.connect(mongo_url).then(() => {
