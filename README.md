@@ -72,28 +72,15 @@ Supprime une tache existante avec l'ID fourni en paramètre. Retourne la tache s
     npm install
     npm run dev
 
-4. Vue Mobile
-    - Gestion complète de taches avec React Native (Expo) pour mobile
-    - Utilisation d'expo pour faciliter la création de l'application mobile
-    - Installation des dépendances nécessaires : expo, axios...
-    - Création du composant TodoItem qui affichera chaque tache
-    - Ajout d'un bouton plus (+) pour ajouter une nouvelle tache
-    - Affichage de la liste des tâches
-    - Possibilité de modifier ou supprimer une tache
-    - Mise à jour de la tache sélectionnée lorsqu'il est modifié
-    - Enregistrement de la tache lorsque vous avez terminé de modifier ou créer une tache
-
-5. Défis rencontré pendant le développement:
+4. Défis rencontré pendant le développement:
     * Lors du développement de cette application  j’ai eu beaucoup de difficultés à savoir :astronaut:
     + Comment faire pour terminer le projet dans le temps donné avec le problème de délestage actuel au Mali ?
     + Comment faire pour que les données soient stockées dans un serveur ?
-    + Comment communiquer entre mon API NodeJS et ma partie mobile / React JS ?
-    + Comment afficher correctement mes données dans un composant React Native ?
+    + Comment communiquer entre mon API NodeJS et ma partie React JS ?
     
     Pour résoudre ces défis je me suis basé sur plusieurs sources d'inspiration :
     - La gestion du temps pour pouvoir m'organiser avec le delestage
     - J'ai consulté la documentation officielle de React
     - Utilisant axios pour effectuer des requêtes HTTP vers l'API NodeJS
-    - Le site Expo pour apprendre à utiliser React Native
 
     
