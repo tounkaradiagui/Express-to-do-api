@@ -22,11 +22,14 @@ const createTodo = async (req, res) => {
 // Récupérer toute la liste des taches
 const getAllTodo = async (req, res) => {
     try {
-        const todo = await Todo.find({});
-        if(!todo) {
+        const todos = await Todo.find({});
+        if(!todos) {
             return res.status(404).json({ error : "Aucune tâche trouvée" });
         }
-        return res.status(200).json({todo })
+        return res.status(200).json({
+            count: todos.length,
+            data: todos
+        })
     } catch (error) {
         console.log(error);
     }

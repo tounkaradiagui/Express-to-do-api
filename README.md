@@ -84,11 +84,16 @@ Supprime une tache existante avec l'ID fourni en paramètre. Retourne la tache s
     - Enregistrement de la tache lorsque vous avez terminé de modifier ou créer une tache
 
 5. Défis rencontré pendant le développement:
-    * Lors du développement de ctte application  j’ai eu beaucoup de difficultés à savoir :astronaut:
-    + Comment faire pour terminer le projet dans le temps donné qui 24h avec le problème de délestage actuel au Mali ?
+    * Lors du développement de cette application  j’ai eu beaucoup de difficultés à savoir :astronaut:
+    + Comment faire pour terminer le projet dans le temps donné avec le problème de délestage actuel au Mali ?
     + Comment faire pour que les données soient stockées dans un serveur ?
     + Comment communiquer entre mon API NodeJS et ma partie mobile / React JS ?
     + Comment afficher correctement mes données dans un composant React Native ?
     
-    Pour résoudre ces défis je me suis appuyé sur plusieurs ressources comme :
+    Pour résoudre ces défis je me suis basé sur plusieurs sources d'inspiration :
+    - La gestion du temps pour pouvoir m'organiser avec le delestage
+    - J'ai consulté la documentation officielle de React
+    - Utilisant axios pour effectuer des requêtes HTTP vers l'API NodeJS
+    - Le site Expo pour apprendre à utiliser React Native
+
     

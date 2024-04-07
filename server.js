@@ -2,10 +2,12 @@ const dotenv = require('dotenv').config()
 const express = require('express')
 const mongoose = require('mongoose')
 const app = express()
-const todoRoutes = require('./routes/todoRoutes')
+const cors =  require("cors")
+const todoRoutes = require('./routes/todoRoutes.js')
 
 // Middleware pour parser les données envoyées dans le corps de la requête.
 app.use(express.json());
+app.use(cors())
 
 // Port sur lequel le serveur est écouté
 const PORT = process.env.PORT || 8000
