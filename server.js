@@ -7,7 +7,6 @@ const todoRoutes = require('./routes/todoRoutes.js')
 
 // Middleware pour parser les données envoyées dans le corps de la requête.
 app.use(express.json());
-app.use(cors())
 
 // Port sur lequel le serveur est écouté
 const PORT = process.env.PORT || 8000
@@ -25,11 +24,9 @@ app.use('/api/todo', todoRoutes);
 
 // Connexion à la base de données
 mongoose.connect(mongo_url).then(() => {
-
     console.log("Connexion réussie à MongoDB");
-    
     app.listen(PORT, () => {
-        console.log(`Le serveur s'exécute sur le port ${PORT}`);
+        console.log(`Le serveur s'exécute sur http://192.168.216.140/${PORT}`);
     });
 
 }).catch((error) => {

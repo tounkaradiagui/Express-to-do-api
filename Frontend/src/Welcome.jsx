@@ -10,7 +10,7 @@ const Welcome = () => {
 
   useEffect(() => {
     setLoading(true);
-    axios.get("http://localhost:3000/api/todo").then((res) => {
+    axios.get("http://192.168.216.140:3000/api/todo").then((res) => {
         setTodos(res.data.data);
         setLoading(false);
         console.log(res.data);
